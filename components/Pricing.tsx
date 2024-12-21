@@ -123,27 +123,26 @@ export function Pricing() {
             </span>{" "}
             for everyone.
           </h2>
-          <p className="mt-4 text-lg text-slate-400">Our software is targeted towards internships.</p>
+          <p className="mt-4 text-lg text-slate-400">Our software is targeted towards delivering impact.</p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             featured
-            name="Students"
-            price="$0*"
-            description="For students looking for a way to easily get internships.     "
+            name="SMEs"
+            price="$0"
+            description="For Social Impact firms that are looking for a consistent source of waste by products"
             href="/register"
-            features={["Apply to all the roles for the firms on our platform with 1 application", "Insights"]}
+            features={["Stability", "Insights"]}
           />
           <Plan
             featured
-            name="Startups / Small business"
-            price="$0*"
-            description="For SMEs looking to outsource part of their HR department"
+            name="Firms with waste by products"
+            price="$x"
+            description="For Firms"
             href="/register"
             features={[
-              "Applicants Matched to your company based on your preference",
-              "Unlimited Job postings",
-              "Insights",
+              "Reduce carbon footprint",
+              "Gain Carbon credits to offset emissions ",
             ]}
           />
           <Plan

@@ -99,7 +99,7 @@ const PrivacyContent = () => {
               Data Protection Officer at:
             </p>
             <p className="mt-2">
-              Email: Privacy@Linkifyai.com
+              Email: Privacy@Impactifyai.com
               <br />
               {/* Address: 123 Employment Street, #01-01, Singapore 123456 */}
             </p>

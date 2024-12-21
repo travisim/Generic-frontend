@@ -1,36 +1,35 @@
-import Image from 'next/image'
+import Image from "next/image"
 
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
+import { Container } from "@/components/Container"
+import backgroundImage from "@/images/background-faqs.jpg"
 
 const faqs = [
   [
     {
-      question: 'Who runs Linkify?',
+      question: "Who runs Impactify?",
       answer:
-        'NUS CS students who faced internship woes and decided to solve make applying for internships a better experiece.',
+        "NUS CS students who faced internship woes and decided to solve make applying for internships a better experiece.",
     },
     {
-      question: 'How do I apply for a internship/job at Linkify?',
+      question: "How do I apply for a internship/job at Impactify?",
       answer:
-        'Apply through our platform. if you are a match for us, you will recieve notice on Linkify like the other firms on our platform.',
+        "Apply through our platform. if you are a match for us, you will recieve notice on Impactify like the other firms on our platform.",
     },
   ],
   [
     {
-      question: 'Which degree programme students can use Linkify ?',
+      question: "Which degree programme students can use Impactify ?",
       answer:
-        'Linkify is currently optimised for internships commonly associated with Computer Science and Business Administration students. if you are from other faculties, and are interested in the jobs we have, feel free to join Linkify.',
+        "Impactify is currently optimised for internships commonly associated with Computer Science and Business Administration students. if you are from other faculties, and are interested in the jobs we have, feel free to join Impactify.",
     },
     {
-      question:
-        'Why did we start Linkify',
+      question: "Why did we start Impactify",
       answer:
-        'The current job application process is tedious, filling in many forms, tracking deadlines, reading job descriptions. We want to make it easier for students to apply for internships and jobs.',
+        "The current job application process is tedious, filling in many forms, tracking deadlines, reading job descriptions. We want to make it easier for students to apply for internships and jobs.",
     },
     // {
     //   question:
-    //     'I found other companies called Linkify, are you sure you can use this name?',
+    //     'I found other companies called Impactify, are you sure you can use this name?',
     //   answer:
     //     'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
     // },

@@ -47,7 +47,6 @@ module.exports = {
           "Segoe UI Emoji",
           "Segoe UI Symbol",
           "Noto Color Emoji",
-         
         ],
         sans: [
           "Inter",
@@ -65,9 +64,8 @@ module.exports = {
           "Segoe UI Emoji",
           "Segoe UI Symbol",
           "Noto Color Emoji",
-          
         ],
-        dmSans:["DM Sans","sans-serif"],
+        dmSans: ["DM Sans", "sans-serif"],
       },
       borderWidth: {
         DEFAULT: "1px",
@@ -86,7 +84,7 @@ module.exports = {
       },
     },
   },
-  plugins: [     require('@tailwindcss/forms')],
+  plugins: [require("@tailwindcss/forms")],
   future: {
     hoverOnlyWhenSupported: true,
   },

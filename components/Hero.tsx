@@ -1,19 +1,19 @@
-import Image from 'next/image'
+import Image from "next/image"
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import logoLaravel from '@/images/logos/laravel.svg'
-import logoMirage from '@/images/logos/mirage.svg'
-import logoStatamic from '@/images/logos/statamic.svg'
-import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
-import logoHanger from '@/images/logos/hanger.png'
+import { Button } from "@/components/Button"
+import { Container } from "@/components/Container"
+import logoLaravel from "@/images/logos/laravel.svg"
+import logoMirage from "@/images/logos/mirage.svg"
+import logoStatamic from "@/images/logos/statamic.svg"
+import logoStaticKit from "@/images/logos/statickit.svg"
+import logoTransistor from "@/images/logos/transistor.svg"
+import logoTuple from "@/images/logos/tuple.svg"
+import logoHanger from "@/images/logos/hanger.png"
 export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
       <h1 className="font-display mx-auto max-w-4xl text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-        Internships{" "}
+        Impact{" "}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -25,10 +25,10 @@ export function Hero() {
           </svg>
           <span className="relative">made simple</span>
         </span>{" "}
-        for undergraduates.
+        for Businesses.
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        Job application forms are tedious to apply. We make it easy, so you can focus on your skills.
+        Dealing with your waste by products is tough. We make it easy.
       </p>
       <div className="mt-5 flex justify-center gap-x-6">
         <Button href="/register" className="px-15 py-15 text-xl">
@@ -41,7 +41,7 @@ export function Hero() {
           <span className="ml-3">Watch video</span>
         </Button> */}
       </div>
-      <div className="mt-36 lg:mt-44">
+      {/* <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">Incubating at</p>
         <ul
           role="list"
@@ -49,7 +49,7 @@ export function Hero() {
         >
           {[
             [
-              { name: "NUS Hanger", logo: logoHanger },
+
               // { name: "Tuple", logo: logoTuple },
               // { name: "StaticKit", logo: logoStaticKit },
             ],
@@ -70,7 +70,7 @@ export function Hero() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </Container>
   )
 }

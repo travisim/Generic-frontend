@@ -28,7 +28,7 @@ const navigation = {
     // { name: 'API Status', href: '#' },
   ],
   company: [
-  { name: "About", href: "/" },
+    { name: "About", href: "/" },
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },
@@ -209,7 +209,7 @@ export function Footer() {
             ))} */}
           </div>
           <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
-            &copy; 2024 Linkify. All rights reserved.
+            &copy; 2024 Impactify. All rights reserved.
           </p>
         </div>
       </div>

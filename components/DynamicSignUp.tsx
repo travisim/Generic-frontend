@@ -1,15 +1,13 @@
 // app/components/DynamicSignUp.tsx
 "use client"
 
-
 import React, { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/Button"
 import { SelectField, TextField } from "@/components/Fields"
 
-
 const DynamicSignUp: React.FC = () => {
- const router = useRouter()
+  const router = useRouter()
   const [userType, setUserType] = useState<string>("jobseeker")
   const [formData, setFormData] = useState<Record<string, string>>({})
 
@@ -36,7 +34,7 @@ const DynamicSignUp: React.FC = () => {
       })
       if (response.ok) {
         // alert("Form submitted successfully")
-    router.push("/success")
+        router.push("/success")
         // Reset form or redirect user
       } else {
         alert("Error submitting form")
@@ -74,11 +72,20 @@ const DynamicSignUp: React.FC = () => {
         required
         onChange={handleChange}
       />
+      <TextField
+        className="col-span-full"
+        label="Password"
+        name="password"
+        type="password"
+        autoComplete="new-password"
+        required
+        onChange={handleChange}
+      />
 
       <SelectField
         className="col-span-full"
         label="User Type"
-        name="userType"
+        name="user_type"
         onChange={(e) => {
           handleUserTypeChange(e)
           handleChange(e)
@@ -87,30 +94,49 @@ const DynamicSignUp: React.FC = () => {
         required
       >
         <option value=""></option>
-        <option value="jobseeker">Jobseeker</option>
-        <option value="employer">Employer</option>
+        <option value="Social">Social Impact Firm</option>
+        <option value="Corporations">Corporations</option>
       </SelectField>
 
-      {userType === "jobseeker" && (
+      {userType === "Social" && (
         <>
-          <SelectField className="col-span-full" label="University" name="university" required onChange={handleChange}>
-            <option value=""></option>
-            <option value="nus">NUS</option>
-            <option value="ntu">NTU</option>
-            <option value="smu">SMU</option>
-          </SelectField>
           <TextField
             className="col-span-full"
-            label="How many job applications did you make to get one job?"
-            name="job_application_count"
-            type="number"
-            pattern="[0-9]*"
+            label="Company Name"
+            name="company_name"
+            autoComplete="organization"
             required
             onChange={handleChange}
           />
           <SelectField
-            label="Do you prefer MNCs or startups for your internships?"
-            name="company_preference"
+            label="Types of by-products processed?"
+            name="processing_services"
+            required
+            onChange={handleChange}
+          >
+            <option value=""></option>
+            <option value="food_waste">Food Waste</option>
+            <option value="food_pulp">Food Pulp</option>
+            <option value="plastic">Plastic</option>
+            <option value="others">Others</option>
+          </SelectField>
+
+          <SelectField
+            label="Industry for final processed goods?"
+            name="final_goods_industry"
+            required
+            onChange={handleChange}
+          >
+            <option value=""></option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="food_and_beverage">Food & Beverage</option>
+            <option value="home">Home Furnishings</option>
+            <option value="others">Others</option>
+          </SelectField>
+
+          <SelectField
+            label="Ideal monthly volume of by-products?"
+            name="ideal_volume_per_month"
             required
             onChange={handleChange}
           >
@@ -118,38 +144,40 @@ const DynamicSignUp: React.FC = () => {
             <option value="mncs">MNCs</option>
             <option value="startups">Startups</option>
           </SelectField>
-          <SelectField
-            label="Is the current job application process too long?"
-            name="job_application_process_length"
+          <TextField
+            label="Expected processing price per kg?"
+            name="processing_price_per_kg"
+            type="number"
+            pattern="[0-9]*"
             required
             onChange={handleChange}
-          >
-            <option value=""></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </SelectField>
+          />
+          <TextField
+            className="col-span-full"
+            label="Description of services provided?"
+            name="description_of_services"
+            type="text"
+            required
+            onChange={handleChange}
+          />
           <SelectField
             className="col-span-full"
-            label="Graduate or undergraduate?"
-            name="degree_level_preference"
+            label="Location of Processing Facility"
+            name="location_of_repurposable_products"
             required
             onChange={handleChange}
           >
-            <option value=""></option>
-            <option value="undergraduate">Undergraduate</option>
-            <option value="graduate">Graduate</option>
-          </SelectField>
-          <SelectField className="col-span-full" label="Degree" name="degree" required onChange={handleChange}>
-            <option value=""></option>
-            <option value="computer_science">Computer Science</option>
-            <option value="business_administration">Business Administration</option>
-            <option value="arts_and_social_sciences">Arts and Social Sciences</option>
-            <option value="others">Others</option>
+            <option value=""> </option>
+
+            <option value="East">East</option>
+            <option value="West">West</option>
+            <option value="Central">Central</option>
+            <option value="North">North</option>
           </SelectField>
         </>
       )}
 
-      {userType === "employer" && (
+      {userType === "Corporations" && (
         <>
           <TextField
             className="col-span-full"
@@ -161,26 +189,31 @@ const DynamicSignUp: React.FC = () => {
           />
           <SelectField
             className="col-span-full"
-            label="Are you able to make purchasing decisions at your practice?"
-            name="purchasing_decisions"
+            label="Waste by products for repurposing available"
+            name="waste_by_products_available"
             required
             onChange={handleChange}
           >
             <option value=""></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="grain_pulp">Grain Pulp</option>
+            <option value="food_waste">Food Waste</option>
+            <option value="type_1_plastic">Type 1 plastic(PET or PETE)</option>
+            <option value="type_2_plastic">Type 2 plastic(HDPE (High density polyethylene))</option>
+            <option value="type_4_plastic">Type 4 plastic(plastic bags)</option>
+            <option value="type_others_plastic">Plastic of other types</option>
           </SelectField>
+
           <TextField
-            label="How many HR staff is at your practice?"
-            name="hr_staff_count"
+            label="Ideal monthly volume of by-products?"
+            name="ideal_volume_per_month"
             type="number"
             pattern="[0-9]*"
             required
             onChange={handleChange}
           />
           <TextField
-            label="Number of interns you are looking to hire"
-            name="intern_hire_count"
+            label="Expected processing price per kg?"
+            name="expected_processing_price_per_kg"
             type="number"
             pattern="[0-9]*"
             required
@@ -188,54 +221,20 @@ const DynamicSignUp: React.FC = () => {
           />
           <SelectField
             className="col-span-full"
-            label="Who are you looking for?"
-            name="student_preference"
+            label="Location of where repurposable products are produced"
+            name="location_of_repurposable_products"
             required
             onChange={handleChange}
           >
-            <option value=""></option>
-            <option value="undergraduate">Undergraduate</option>
-            <option value="postgraduate">Postgraduate</option>
-            <option value="phd">PhD</option>
-          </SelectField>
-          <SelectField
-            className="col-span-full"
-            label="Which course are you looking for?"
-            name="course_preference"
-            required
-            onChange={handleChange}
-          >
-            <option value=""></option>
-            <option value="cs">Computer Science</option>
-            <option value="business_analytics">Business Analytics</option>
-            <option value="cyber_security">Cyber Security</option>
-            <option value="info_system">Information Systems</option>
-            <option value="bba">Business Administration</option>
-            <option value="accountancy">Accountancy</option>
-            <option value="real_estate">Real Estate</option>
-            <option value="arts_and_social_sciences">Arts and Social Sciences</option>
-            <option value="engineering">Engineering</option>
-            <option value="mechanical_eng">Mechanical Engineering</option>
-            <option value="electrical_eng">Electrical Engineering</option>
-            <option value="law">Law</option>
-            <option value="medicine">Medicine</option>
-            <option value="science">Science</option>
-            <option value="music">Music</option>
-            <option value="public_policy">Public Policy</option>
-            <option value="quantitative_finance">Quantitative Finance</option>
-            <option value="others">Others</option>
+            <option value=""> </option>
+            <option value="East">East</option>
+            <option value="West">West</option>
+            <option value="Central">Central</option>
+            <option value="North">North</option>
           </SelectField>
         </>
       )}
-      {/* <TextField
-        className="col-span-full"
-        label="Password"
-        name="password"
-        type="password"
-        autoComplete="new-password"
-        required
-        onChange={handleChange}
-      /> */}
+
       <SelectField
         className="col-span-full"
         label="How did you hear about us?"
@@ -256,7 +255,7 @@ const DynamicSignUp: React.FC = () => {
           </span>
         </Button>
         <p className="mt-2 text-center text-sm text-gray-500">
-          By agreeing to join the waitlist, you agree to recieve updates to features on our site.
+          By agreeing to register, you agree to recieve updates to features on our site.
         </p>
       </div>
     </form>

@@ -1,20 +1,17 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import { Tab } from "@headlessui/react"
+import clsx from "clsx"
 
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import { Container } from "@/components/Container"
+import backgroundImage from "@/images/background-features.jpg"
+import screenshotExpenses from "@/images/screenshots/expenses.png"
+import screenshotPayroll from "@/images/screenshots/payroll.png"
+import screenshotReporting from "@/images/screenshots/reporting.png"
+import screenshotVatReturns from "@/images/screenshots/vat-returns.png"
 import logoTick from "@/images/logos/tick.png"
-
-
-
 
 const features = [
   // {
@@ -24,17 +21,22 @@ const features = [
   //   // image: screenshotPayroll,
   // },
   {
-    title: "Securing Internships",
-    description: "With 1 job application, you can apply to all internships for Startups / SMEs on Linkify. ",
+    title: "Smart Sourcing",
+    description: "We find the best social impact firm to make your supply chain more sustainable.",
     // image: screenshotExpenses,
-    icon: logoTick
+    icon: logoTick,
   },
   {
-    title: "Intelligence",
-    description:
-      "We use AI and the past performance of similar candidates to determine your suitability, there is no need to use AI to augement your CV or cover letter.",
+    title: "Verifiable",
+    description: "We ensure that these social impact firms you are working with are legitimate.",
     // image: screenshotVatReturns,
-    icon: logoTick
+    icon: logoTick,
+  },
+  {
+    title: "Offset Carbon",
+    description: "We help you offset your carbon footprint in accordance with the Paris Agreement.",
+    // image: screenshotVatReturns,
+    icon: logoTick,
   },
   // {
   //   title: 'Insights',
@@ -45,22 +47,20 @@ const features = [
 ]
 
 export function PrimaryFeatures() {
-  let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
-    'horizontal',
-  )
+  let [tabOrientation, setTabOrientation] = useState<"horizontal" | "vertical">("horizontal")
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    let lgMediaQuery = window.matchMedia("(min-width: 1024px)")
 
     function onMediaQueryChange({ matches }: { matches: boolean }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+      setTabOrientation(matches ? "vertical" : "horizontal")
     }
 
     onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    lgMediaQuery.addEventListener("change", onMediaQueryChange)
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+      lgMediaQuery.removeEventListener("change", onMediaQueryChange)
     }
   }, [])
 
@@ -81,11 +81,11 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            We help you catch Internship opportunities
+            We help you discover the best impact opportunities
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          {/* <p className="mt-6 text-lg tracking-tight text-blue-100">
             Job applications are tedious to apply. We make it easy.
-          </p>
+          </p> */}
         </div>
 
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

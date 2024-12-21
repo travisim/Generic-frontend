@@ -22,7 +22,7 @@ export default function Register() {
           <Logo className="h-10 w-auto" />
         </Link>
       </div>
-      <h2 className="mt-20 text-lg font-semibold text-gray-900">Join the Waitlist Today</h2>
+      <h2 className="mt-20 text-lg font-semibold text-gray-900">Register Today</h2>
       {/* <p className="mt-2 text-sm text-gray-700">
         Already registered?{" "}
         <Link href="/login" className="font-medium text-blue-600 hover:underline">

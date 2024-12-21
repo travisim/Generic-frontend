@@ -6,11 +6,10 @@ import { type Metadata } from "next"
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Linkify",
-    default: "Linkify - Easily apply for internships and employment",
+    template: "%s - Impactify",
+    default: "Impactify - Easily apply for internships and employment",
   },
-  description:
-    "Job application forms are tedious to apply. We make it easy, so you can focus on your skills.",
+  description: "Job application forms are tedious to apply. We make it easy, so you can focus on your skills.",
 }
 
 const inter = Inter({

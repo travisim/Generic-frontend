@@ -8,11 +8,10 @@ import { Pricing } from "@/components/Pricing"
 import { PrimaryFeatures } from "@/components/PrimaryFeatures"
 import { SecondaryFeatures } from "@/components/SecondaryFeatures"
 
-
 import { Testimonials } from "@/components/Testimonials"
 
 export const metadata: Metadata = {
-  title: "Linkify",
+  title: "Impactify",
   twitter: {
     card: "summary_large_image",
   },
@@ -38,7 +37,7 @@ export default function Web() {
         {/* <SecondaryFeatures /> */}
         {/* <CallToAction /> */}
         <Testimonials />
-        <Pricing />
+        {/* <Pricing /> */}
         <Faqs />
       </main>
       <Footer />
