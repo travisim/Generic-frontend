@@ -71,12 +71,13 @@ export function PrimaryFeatures() {
       className="relative overflow-hidden bg-green-600 pb-28 pt-20 sm:py-32"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2"
         src={backgroundImage}
         alt=""
         width={2245}
         height={1636}
         unoptimized
+        priority
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
@@ -93,7 +94,7 @@ export function PrimaryFeatures() {
             {features.map((feature) => (
               <div key={feature.title} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-white">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black-600">
+                  <div className="bg-black-600 absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
                     <Image src={feature.icon} alt={feature.title} height={100} unoptimized />
                     {/* <feature.icon aria-hidden="true" className="h-6 w-6 text-white" /> */}
                   </div>

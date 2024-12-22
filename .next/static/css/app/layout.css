@@ -1139,6 +1139,9 @@ select{
 .h-full{
   height: 100%;
 }
+.h-auto{
+  height: auto;
+}
 .min-h-full{
   min-height: 100%;
 }

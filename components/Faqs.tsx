@@ -6,50 +6,52 @@ import backgroundImage from "@/images/background-faqs.jpg"
 const faqs = [
   [
     {
-      question: "Who runs Impactify?",
+      question: "What is Impactify?",
       answer:
-        "NUS CS students who faced internship woes and decided to solve make applying for internships a better experiece.",
+        "Impactify is a platform that connects businesses and organizations with sustainable waste management solutions, helping convert byproducts into valuable resources through our network of processing partners.",
     },
     {
-      question: "How do I apply for a internship/job at Impactify?",
+      question: "What types of waste can be processed?",
       answer:
-        "Apply through our platform. if you are a match for us, you will recieve notice on Impactify like the other firms on our platform.",
+        "We currently handle food waste (including spent grains and coffee grounds), and plastics (Type 1 PET/PETE and Type 2 HDPE). We're constantly expanding our processing capabilities through our partner network.",
     },
   ],
   [
     {
-      question: "Which degree programme students can use Impactify ?",
+      question: "How does the process work?",
       answer:
-        "Impactify is currently optimised for internships commonly associated with Computer Science and Business Administration students. if you are from other faculties, and are interested in the jobs we have, feel free to join Impactify.",
+        "Once you sign up, you can list your byproducts, specify volumes, and get matched with appropriate processing partners. Our platform handles the logistics, tracking, and carbon credit calculations automatically.",
     },
     {
-      question: "Why did we start Impactify",
+      question: "What are the benefits of using Impactify?",
       answer:
-        "The current job application process is tedious, filling in many forms, tracking deadlines, reading job descriptions. We want to make it easier for students to apply for internships and jobs.",
+        "Benefits include reduced waste management costs, potential revenue from byproduct conversion, carbon credits, and detailed sustainability reporting for ESG compliance.",
     },
-    // {
-    //   question:
-    //     'I found other companies called Impactify, are you sure you can use this name?',
-    //   answer:
-    //     'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    // },
   ],
-  // [
-  //   {
-  //     question: 'How do you generate reports?',
-  //     answer:
-  //       'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-  //   },
-  //   {
-  //     question: 'Can we expect more inventory features?',
-  //     answer: 'In life it’s really better to never expect anything at all.',
-  //   },
-  //   {
-  //     question: 'I lost my password, how do I get into my account?',
-  //     answer:
-  //       'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-  //   },
-  // ],
+  [
+    {
+      question: "Who can join Impactify?",
+      answer:
+        "We work with businesses of all sizes, social enterprises, and individuals committed to sustainable waste management. Our platform is particularly valuable for F&B businesses, manufacturers, and organizations with regular waste streams.",
+    },
+    {
+      question: "How are carbon credits calculated?",
+      answer:
+        "Carbon credits are calculated based on the type and volume of waste diverted from landfills, the processing method used, and the final output product. All calculations are verified by third-party environmental auditors.",
+    },
+  ],
+  [
+    {
+      question: "What happens to the processed waste?",
+      answer:
+        "Depending on the type of waste, it gets converted into various valuable products. For example, spent coffee grounds can become alternative coffee products, and plastic waste can be transformed into furniture or new packaging materials.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply sign up on our platform, select your user type (Business, Social Enterprise, or Individual), and provide details about your waste stream. Our team will guide you through the process and connect you with suitable processing partners.",
+    },
+  ],
 ]
 
 export function Faqs() {
