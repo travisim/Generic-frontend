@@ -8,7 +8,7 @@ import { SelectField, TextField } from "@/components/Fields"
 
 const DynamicSignUp: React.FC = () => {
   const router = useRouter()
-  const [userType, setUserType] = useState<string>("jobseeker")
+  const [userType, setUserType] = useState<string>("Social")
   const [formData, setFormData] = useState<Record<string, string>>({})
 
   const handleUserTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
