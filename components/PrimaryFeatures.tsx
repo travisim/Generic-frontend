@@ -68,7 +68,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-green-600 pb-28 pt-20 sm:py-32"
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -93,7 +93,7 @@ export function PrimaryFeatures() {
             {features.map((feature) => (
               <div key={feature.title} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-white">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black-600">
                     <Image src={feature.icon} alt={feature.title} height={100} unoptimized />
                     {/* <feature.icon aria-hidden="true" className="h-6 w-6 text-white" /> */}
                   </div>

@@ -199,8 +199,6 @@ const DynamicSignUp: React.FC = () => {
             <option value="food_waste">Food Waste</option>
             <option value="type_1_plastic">Type 1 plastic(PET or PETE)</option>
             <option value="type_2_plastic">Type 2 plastic(HDPE (High density polyethylene))</option>
-            <option value="type_4_plastic">Type 4 plastic(plastic bags)</option>
-            <option value="type_others_plastic">Plastic of other types</option>
           </SelectField>
 
           <TextField
@@ -251,7 +249,7 @@ const DynamicSignUp: React.FC = () => {
       <div className="col-span-full">
         <Button type="submit" variant="solid" color="blue" className="w-full">
           <span>
-            Join Waitlist <span aria-hidden="true">&rarr;</span>
+            Sign Up <span aria-hidden="true">&rarr;</span>
           </span>
         </Button>
         <p className="mt-2 text-center text-sm text-gray-500">
