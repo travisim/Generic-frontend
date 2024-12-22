@@ -11,27 +11,57 @@ import avatarDefault from "@/images/avatars/avatar-default.png"
 const testimonials = [
   [
     {
-      content:
-        "My waste plastic scrap is now being used to create disigner furniture instead of being incinerated",
-
+      content: "Impactify helped us find new sustainable uses for spent grains, turning waste into valuable products.",
       author: {
-        name: "Hyundai",
-        role: "Corporation",
+        name: "Moonbeam Co",
+        role: "SME - Sustainable Food Production",
         image: avatarDefault,
       },
     },
     {
-      content:
-        "With Impactify, my waste barley grains can now be used to create delicious cookies",
+      content: "Through Impactify's platform, we've transformed spent grains into high-quality coffee alternatives.",
       author: {
-        name: "Brewlander",
-        role: "SME ",
+        name: "Revive",
+        role: "Food Innovation Company",
         image: avatarDefault,
       },
     },
   ],
   [
-  
+    {
+      content: "Our plastic recycling process became more efficient with Impactify's network of partners.",
+      author: {
+        name: "Plastify",
+        role: "Plastic Recycling Solutions",
+        image: avatarDefault,
+      },
+    },
+    {
+      content: "Impactify enabled us to source recycled plastics reliably for our sustainable furniture production.",
+      author: {
+        name: "Semula",
+        role: "Sustainable Furniture Manufacturer",
+        image: avatarDefault,
+      },
+    },
+  ],
+  [
+    {
+      content: "With Impactify, my waste barley grains can now be used to create delicious cookies.",
+      author: {
+        name: "Brewlander",
+        role: "SME",
+        image: avatarDefault,
+      },
+    },
+    {
+      content: "The platform has streamlined our waste management process and improved our sustainability metrics.",
+      author: {
+        name: "Returnify Corp",
+        role: "Corporation",
+        image: avatarDefault,
+      },
+    },
   ],
 ]
 
